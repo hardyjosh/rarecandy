@@ -8,27 +8,40 @@
     <meta name="author" content="John Polacek" />
     <meta name="viewport" content="width=device-width">
     <link href='http://fonts.googleapis.com/css?family=Source+Sans+Pro:900&text=ABCDEFGHIJKLMNOPQRSTUVWXYZ' rel='stylesheet' type='text/css'>
-    <link rel="stylesheet" href="css/style.css">
-    <link rel="stylesheet" href="css/bigvideo.css">
+
+    <!-- Loading Bootstrap -->
+    <link href="bootstrap/css/bootstrap.css" rel="stylesheet">
+
+    <!-- Loading Flat UI -->
+    <link href="css/flat-ui.css" rel="stylesheet">
+
+
+
+
 </head>
 <body>
     <div class="main">
 		<!-- Begin MailChimp Signup Form -->
+        <div id="overview" class="box">
+            <h1>BigVideo<span class="dimmed"><small>.</small>js</span></h1>
+            <h2>Simple Ambient Video Example</h2>
+        </div>
+
 
 		<div id="mc_embed_signup">
 		<form action="http://welcometoivory.us7.list-manage.com/subscribe/post?u=d4dc4b72fef8602756d356b16&amp;id=c3c34987dd" method="post" id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form" class="validate" target="_blank" novalidate>
 		<div class="mc-field-group">
-			<label for="mce-EMAIL">
+			<label for="mce-EMAIL">Email Address  <span class="asterisk">*</span>
 		</label>
-			<input type="email" value="Email" name="EMAIL" class="required email form-control" id="mce-EMAIL">
+			<input type="email" value="" name="EMAIL" class="required email form-control" id="mce-EMAIL">
 		</div>
 		<div class="mc-field-group">
-			<label for="mce-FNAME"></label>
-			<input type="text" value="First Name" name="FNAME" class="form-control" id="mce-FNAME">
+			<label for="mce-FNAME">First Name </label>
+			<input type="text" value="" name="FNAME" class="form-control" id="mce-FNAME">
 		</div>
 		<div class="mc-field-group">
-			<label for="mce-LNAME"></label>
-			<input type="text" value="Last Name" name="LNAME" class="form-control" id="mce-LNAME">
+			<label for="mce-LNAME">Last Name </label>
+			<input type="text" value="" name="LNAME" class="form-control" id="mce-LNAME">
 		</div>
 			<div id="mce-responses" class="clear">
 				<div class="response" id="mce-error-response" style="display:none"></div>
@@ -228,6 +241,7 @@
 
 		</script>
 		<!--End mc_embed_signup-->
+
     </div>
 
     <!-- BigVideo Dependencies -->
@@ -245,7 +259,7 @@
 	    $(function() {
             var BV = new $.BigVideo();
 			BV.init();
-			BV.show('http://vimeo.com/74837566/download?t=1379519504&v=190738367&s=d004f3af6578aeb9506d343fb213a87d',{ambient:true});
+			BV.show('http://pdl.vimeocdn.com/64304/893/190738367.mp4?token=1379521766_5e2f05b85aa551838f65ffdada0235e8',{ambient:true});
 	    });
     </script>
 </body>
