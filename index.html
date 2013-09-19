@@ -37,6 +37,7 @@
     <script src="js/jquery-ui-1.8.22.custom.min.js"></script>
     <script src="js/jquery.imagesloaded.min.js"></script>
     <script src="http://vjs.zencdn.net/4.0/video.js"></script>
+    <script src="js/vendor/modernizr-2.6.2.min.js"></script>
 
     <!-- BigVideo -->
     <script src="js/bigvideo.js"></script>
@@ -44,10 +45,19 @@
     <!-- Demo -->
     <script>
 	    $(function() {
-            var BV = new $.BigVideo();
-			BV.init();
-			BV.show('loop.mp4',{ambient:true});
-	    });
+var BV = new $.BigVideo();
+BV.init();
+if (Modernizr.touch) {
+    BV.show('img/loop.gif');
+} else {
+   BV.show('loop.mp4',{ambient:true});
+}	  
+
+
+  });
+
+
+
     </script>
 </body>
 </html>
